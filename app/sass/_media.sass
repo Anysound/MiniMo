@@ -1,0 +1,237 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+@media (max-width: 1027px)
+    .img_header
+        height: 150%
+// ≥992px
++media-breakpoint-down(md)
+@media (max-width: 992px) 
+    .line
+        display: block
+        margin-left: 9%
+        margin-top: 15%
+    .articles__button
+        margin: 5% 0 7% 0
+// ≥768px
+@media (max-width: 768px)
+    .only-768
+        display: block
+    .toHide-768
+        display: none    
+    .menu
+        &-link
+            display: block
+            width: 50px
+            height: 50px
+            background-color: white
+            border-radius: 50%
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, .4)
+            position: fixed
+            z-index: 3
+            top: 6%
+            right: 6%
+            span
+                display: block
+                height: 2px
+                width: 18px
+                background-color: #333
+                position: absolute
+                left: 50%
+                margin-left: -9px
+                top: 50%
+                margin-top: 2px
+                &:before
+                    transition: all .4s
+                    content: ''
+                    margin-top: -5px
+                    display: block
+                    height: 2px
+                    width: 18px
+                    background-color: #333
+                    position: absolute
+                    left: 50%
+                    margin-left: -9px
+                    top: 50%
+                    margin-top: -5px
+                &:after
+                    transition: all .4s
+                    content: ''
+                    margin-top: -9px
+                    display: block
+                    height: 2px
+                    width: 18px
+                    background-color: #333
+                    position: absolute
+                    left: 50%
+                    margin-left: -9px
+                    top: 50%
+        &-link_active
+            span:before
+                background-color: white
+            span
+                transition: all .4s
+                transform: rotate(45deg)
+                margin-top: 0
+            span:after
+                transform: rotate(90deg)
+                margin-top: -1px            
+    .menu
+        background-color: rgba(255, 255, 255, 0.9)
+        height: 100vh
+        margin-top: 0
+        position: fixed
+        display: flex
+
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        right: -100vw
+        z-index: 2
+        width: 100%
+    .menu_active
+        right: 0
+        height: 100vh
+        padding: 0
+  
+        
+        li
+            line-height: 4
+            margin-left: 0
+            width: 100%
+            text-align: center
+            a
+                color: black
+                width: 100%
+                display: block
+                &:hover
+                    color: gray
+                    transform: translate3d(0px, -7px, 40px)
+    
+    .header__text
+        margin-top: 30px             
+        
+    .articles
+        margin-top: 75px
+    .subscribe__input
+        width: 100%
+    .subscribe__h1
+        font-size: 25px
+        position: relative
+        display: inline
+    .footer
+        height: auto   
+    .footerc
+        display: flex     
+        padding: 0    
+    .footerr
+        margin: 0
+        display: flex
+        width: 100%
+        flex-direction: column
+        
+    .footer__ul
+        display: flex
+        flex-direction: row
+        padding: 0
+        padding-top: 10px
+        margin-bottom: 10px
+        width: 100%
+        justify-content: center
+    .footer__li:first-child
+        margin-right: 40px    
+    .icons
+        display: inline-flex  
+        justify-content: center
+    .icons__p
+        margin: 0
+        color: gray
+    .footer__li_a
+        color: gray 
+    .fa-facebook-f , .fa-twitter , .fa-instagram
+        color: gray
+    .line
+        margin: 0
+        margin-top: 30px  
+    .second-row
+        margin-top: 60px      
+// ≥576px
++media-breakpoint-down(xs)
+@media (max-width: 576px)
+    .container__header
+        .row
+            display: flex
+            flex-direction: column
+    .article__h1 , .header__text_h1
+        margin: 0    
+        line-height: 1.2
+    .header__text_a
+        display: block
+        margin-bottom: 20px
+    .article__p , .header__text_p
+        margin-bottom: 24px       
+    .articles
+        margin-top: 55px
+        padding: 0 4%  
+    .article__img
+        width: 100%
+    .w-100
+        display: inline
+    .header__text
+        padding: 0
+        .col
+            padding: 0
+    .footer
+        height: auto   
+    .footerc
+        display: flex     
+        padding: 0    
+    .footerr
+        margin: 0
+        display: flex
+        width: 100%
+        flex-direction: column
+        
+    .footer__ul
+        display: flex
+        flex-direction: row
+        padding: 0
+        padding-top: 10px
+        margin-bottom: 10px
+        width: 100%
+        justify-content: center
+    .footer__li:first-child
+        margin-right: 40px    
+    .icons
+        display: inline-flex  
+    .icons__p
+        margin: 0
+        color: gray
+    .footer__li_a
+        color: gray 
+    .fa-facebook-f , .fa-twitter , .fa-instagram
+        color: gray
+    .line
+        margin: 0
+        margin-top: 30px  
+    .second-row
+        margin-top: 60px    
+    .lifestyle_a
+        display: none                      
+/*==========  Mobile First  ==========*/
+    
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

@@ -1,0 +1,386 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	min-width: 320px
+	line-height: 1.6
+	overflow-x: hidden
+	margin: 0
+	padding: 0
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+li
+	list-style-type: none
+/** classes **/
+.container
+	max-width: 100%	
+.only-768
+	display: none	
+.menu
+	display: flex
+	flex-direction: row
+	justify-content: flex-end
+	transition: all .5s
+	li
+		list-style-type: none
+		margin-left: 18%
+		a
+			text-transform: uppercase 
+			font-family: 'Playfair_Display'
+			color: rgba(98, 98, 98, 255)
+			
+			cursor: pointer
+			&:hover
+				transition: all .4s
+				color: #e6e6e6
+				text-decoration: none
+.menu_active
+	height: 100vh
+	margin-top: 0
+	padding-top: 0
+.header
+	
+	padding: 0 3%
+	max-width: 100%
+.toFix
+	margin-top: 69px	
+.menu-trigger
+	text-align: center
+	display: none
+	position: absolute
+	right: 17px	
+
+.img_header
+	background-image: cover
+	margin-bottom: 10px
+	display: block
+	height: auto !important
+	position: relative
+	margin-top: 40px	
+.header__text_a
+	font-family: 'Ubuntu'
+	font-size: 14px
+	text-transform: uppercase
+	color: #b4ad9e
+	&:hover
+		transition: all .4s
+		color: #e6e6e6 !important
+		text-decoration: none
+.header__text_comment
+	font-family: Ubuntu
+	font-weight: 400
+	font-size: 14px
+	text-transform: uppercase
+	color: #b4ad9e
+	&:hover
+		transition: all .4s
+		color: #e6e6e6 !important
+		text-decoration: none
+.header__text , 
+	padding: 0 4%
+	margin-top: 99px
+.header__text_h1 , .article__h1
+	margin: 12px 0 15px 0
+	font-family: 'PlayfairDisplay' sans-serif
+	font-size: 33px
+	font-weight: 500
+	color: rgba(98, 98, 98, 255)
+.header__text_p , .article__p
+	font-family: 'PlayfairDisplay' sans-serif
+	font-size: 18px
+	color: rgba(98, 98, 98, 255)
+	line-height: 1.4
+	margin-bottom: 40px
+.artive__p_cursive
+	font-style: italic
+	margin: 20px 30px 30px 30px
+.commentMargin
+	padding-bottom: 40px	
+#commentField
+	display: none
+	position: relative
+	margin-top: 40px
+	padding: 15px
+	font-size: 17px
+	border-radius: 4px
+.commentFieldLS
+	margin-bottom: 40px	
+#comment__send
+	display: none
+	position: absolute
+	right: 0px
+	bottom: 0px
+	width: 100px
+	height: 50px
+	background: white
+	border: 1px solid rgba(98, 98, 98, 255)
+	justify-content: center
+	align-items: center
+	border-radius: 4px
+	color: black
+	&:hover
+		transition: all .4s
+		color: #e6e6e6
+		background: rgba(98, 98, 98, 255)
+		text-decoration: none
+.div__comments
+	display: flex
+	flex-direction: column
+	position: relative
+/*articles*/
+.articles
+	margin-top: 130px
+	padding: 0 8%
+.article__a
+	display: block
+	font-family: Ubuntu, sans-serif
+	font-size: 15px
+	color: rgba(180, 173, 158, 255)
+	text-transform: uppercase
+	margin-top: 29px
+	&:hover
+		transition: all .4s
+		color: #e6e6e6 !important
+		text-decoration: none
+.article__item 
+	display: block
+	img
+		max-width: 100%	
+.second-row
+	margin-top: 100px
+	/**subscribe**/
+.subscribe
+	background: #f0f0f0
+	height: 287px
+	width: 100%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+.subscribe__input
+	background: transparent
+	border: none
+	padding: 5px
+	border-bottom: 1px solid black
+	padding-right: 20px
+	width: 400px
+	position: relative
+	font-family: 'PlayfairDisplay' sans-serif
+	font-size: 18px
+	&:hover, &:focus
+		color: gray
+		opacity: .5
+		&::after
+			color: black
+.input__div
+	position: relative
+	&:after
+		position: absolute
+		font-family: fontawesome
+		content: ''
+		display: block
+		color: black
+		right: 0
+		top: 5px
+.subscribe__h1 , form
+	display: block
+.subscribe__item
+	display: block
+.subscribe__h1
+	font-family: 'PlayfairDisplay' sans-serif 
+	color: rgba(51, 51, 51, 255)
+	font-size: 34px
+	font-weight: 500
+
+/**buttons**/
+
+.articles__a
+	display: block
+	width: 164px
+	height: 60px
+	background: transparent
+	border: 1px solid black
+	display: flex
+	align-items: center
+	justify-content: center
+	font-family: 'PlayfairDisplay' sans-serif
+	font-size: 23px
+	color: rgba(98, 98, 98, 255)
+	&:hover
+		transition: all .4s
+		color: #e6e6e6
+		text-decoration: none
+		border: 1px solid #e6e6e6
+.articles__button
+	margin-top: 75px
+	width: 96%
+	padding-bottom: 6%
+.article__img
+	width: 474px
+	height: 316px
+	width: 100%
+.lifestyle__img
+	height: auto
+	width: 100%	
+	margin: 20px 0
+.line
+	display: none
+	width: 100%
+	height: 1px
+	background: #e6e6e6	
+.lazyload
+	display: none
+.w-100
+	display: none
+.header__text
+	.col-sm-12
+		position: relative
+	.share
+		position: absolute
+		right: 20px
+		bottom: 37px		
+.icons_lifestyle
+	color: #b4ad9d		
+
+/**footer**/
+.footer	
+	width: 100%
+	height: 97px
+	background: #f0f0f0
+.footerr
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin: 0 6.5% 0 4%
+	height: 100%
+.footerc
+	height: 100%	
+.footer__li
+	display: inline-block
+	margin-right: 10px
+.footer__li_a
+	color: #3d3d3d
+	text-decoration: none
+	font-family: 'PlayfairDisplay' sans-serif
+	font-size: 18px
+	font-weight: 500
+	&:hover
+		transition: all .4s
+		opacity: .6
+		color: gray
+		text-decoration: none
+	
+.icons__p
+	margin: 14px
+	color: #3d3d3d
+	text-decoration: none
+	font-family: 'PlayfairDisplay' sans-serif
+	font-size: 18px
+	font-weight: 500
+.footer__ul
+	margin: 0
+.icons
+	width: 50%
+	display: flex
+	align-items: center
+	justify-content: flex-end
+.fa-facebook-f , .fa-twitter , .fa-instagram
+	margin: 7px
+.icons__item
+	a
+		color: #626262
+		padding: 3px
+		&:hover
+			transition: all .4s
+			opacity: .7
+.to-top
+	position: fixed
+	bottom: 20px
+	right: -100px		
+	background-color: #e0e0e0
+	z-index: 11
+	height: 50px
+	width: 50px
+	border-radius: 50%
+	color: #666
+	font-size: 26px
+	text-align: center
+	line-height: 50px
+	cursor: pointer
+	transition: all .4s
+	opacity: 0.6
+	&:hover
+		color: white
+		background-color: #e6e6e6
+		opacity: 1	
+	&.active
+		right: 20px	
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	background-color: white
+	z-index: 100
+@mixin opacity($somevar)
+	opacity: $somevar / 100
+	filter: alpha(opacity=$somevar)
+.pulse
+	position: relative
+	left: 50%
+	top: 50vh
+	margin:
+		left: -50px
+		top: -50px
+	&:before, &:after
+		content: ''
+		border: 5px solid gray
+		width: 80px
+		height: 80px
+		border-radius: 500px
+		position: absolute
+	&:before
+		animation: pulse-outer .8s ease-in infinite
+	&:after
+		animation: pulse-inner .8s linear infinite
+
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+
+@keyframes pulse-inner
+	0%
+		transform: scale(0)
+		@include opacity(0)
+	100%
+		transform: scale(1)
+		@include opacity(100)
+
+
+@import "media" // Always at the end
